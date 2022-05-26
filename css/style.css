@@ -1,0 +1,118 @@
+/* Welcome */
+/* Colors Used: (Dark Blue) #2f4f70, (Orange) #ff5400, (Main-off/white) #f5f3f2, (Inset off/white) #eaf1ef */
+
+/* Syntax
+
+selector{
+	display:
+	height:
+	width:
+	position:
+	margin:
+	padding:
+	flexProperties:
+	textProperties:
+	colorProperties:
+}
+
+*/
+
+/* Global Declarations */
+
+*{
+	font-size:10px;
+	text-align:center;
+}
+body{
+	display:flex;
+	height:100vh;
+	max-width:1800px;
+	flex-wrap:wrap;
+	align-items: center;
+}
+p, a, h1, h2, h3, h4, h5, h6 {
+	color:#2f4f70;
+}
+a{
+	text-decoration:none;
+}
+a:hover{
+	color:#ff5400;
+}
+
+/* //////////////////// */
+/* Header */
+/* //////////////////// */
+
+header{
+	display: flex;
+	min-height:6.5rem;
+	height: 15vh;
+	width: 100vw;
+	flex-flow:row nowrap;
+	justify-content: space-around;
+	align-self:flex-start;
+	align-items:flex-end;
+}
+.headerAnc{
+	display:flex;
+	font-size:calc(12px + 1vw);
+	margin:0px;
+	padding:0px;
+}
+.headerRight{
+	display:flex;
+}
+
+/* //////////////////// */
+/* Body */
+/* //////////////////// */
+
+.beardsleyH{
+	width:100vw;
+	font-size:calc(2rem + 4vw)
+}
+.iCreateH{
+	width:100vw;
+	font-size:calc(0.5rem + 1vw)
+}
+
+/* //////////////////// */
+/* Footer */
+/* //////////////////// */
+
+footer{
+	display:flex;
+	width:100vw;
+	justify-content: center;
+	align-self:flex-end;
+}
+
+/* //////////////////// */
+/* SVG Logo */
+/* //////////////////// */
+
+/* #svgLogo{} is also in the header */
+#svgLogo path:nth-child(1){
+    stroke-dasharray: 552.6px;
+    stroke-dashoffset: 552.6px;
+    animation: line-anim 4000ms ease-out 1100ms forwards;
+}
+#svgLogo path:nth-child(2){
+    stroke-dasharray: 552px;
+    stroke-dashoffset: 552px;
+    animation: line-anim 4000ms ease-out 1000ms forwards;
+}
+
+/* KeyFrame Animations */
+
+@keyframes line-anim{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@media screen and (max-width:650px){
+	
+}
+
