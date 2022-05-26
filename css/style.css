@@ -1,0 +1,278 @@
+/* Welcome */
+/* Colors Used: (Dark Blue) #2f4f70, (Orange) #ff5400, (Main-off/white) #f5f3f2, (Inset off/white) #eaf1ef */
+
+/* Syntax
+
+selector{
+	display:
+	height:
+	width:
+	position:
+	margin:
+	padding:
+	flexProperties:
+	textProperties:
+	colorProperties:
+}
+
+*/
+
+/* Global Declarations */
+
+*{
+	font-size:10px;
+	text-align:center;
+}
+body{
+	display:flex;
+	height:100vh;
+	flex-direction: column;
+	flex-wrap:nowrap;
+	justify-content: center;
+}
+p, a, h1, h2, h3, h4, h5, h6 {
+	color:#2f4f70;
+}
+a{
+	text-decoration:none;
+}
+a:hover{
+	color:#ff5400;
+}
+
+/* //////////////////// */
+/* Header */
+/* //////////////////// */
+
+header{
+	display: flex;
+	position:absolute;
+	top:2vh;
+	min-height:6.5rem;
+	height: 15vh;
+	width: 100vw;
+	flex-flow:row nowrap;
+	justify-content: space-around;
+	align-self:flex-start;
+	align-items:flex-end;
+}
+.headerAnc{
+	display:flex;
+	font-size:calc(12px + 1vw);
+	margin:0px;
+	padding:0px;
+}
+.aboutAnc{
+	width: 33.333%;
+	margin-left: 10vw;
+}
+.header>svg{
+	display: flex;
+	width: 33.333%;
+}
+.headerRight{
+	display:flex;
+	width: 33.333%;
+	margin-right: 10vw;
+	justify-content: flex-end;
+}
+.portfolioAnc{
+	margin-left: 2.5vw;
+}
+
+/* //////////////////// */
+/* Body */
+/* //////////////////// */
+
+.heroContainer{
+	display:flex;
+	flex-flow:row wrap;
+	max-width:inherit;
+}
+.heroFirstGroup{
+	display: flex;
+	width:100vw;
+	margin: 1vh 0px;
+	flex-direction: row;
+	justify-content: center;
+}
+.heroLogo{
+	position:relative;
+	right: calc(2rem + 8vw);
+	width: calc(2rem + 4vw);
+}
+.brianH{
+	display: flex;
+	position:absolute;
+	height:inherit;
+	margin: 2vh 0vw;
+	font-size:calc(2rem + 4vw);
+	align-self: center;
+}
+.beardsleyH{
+	width:100vw;
+	margin: 2vh 0px;
+	font-size:calc(2rem + 4vw);
+}
+.iCreateH{
+	width:100vw;
+	margin: 2vh 3vw;
+	text-align: center;
+	font-size:calc(0.5rem + 1vw);
+}
+.heroSocialCont{
+	display:flex;
+	width:100vw;
+	margin: 2vh 3vw;
+	justify-content: center;
+	align-content: center;
+}
+.heroSocialImg{
+	margin: 0px calc(0.5rem + 1vw);
+	width:calc(1rem + 2vw);
+}
+.heroGithub{
+	border-radius:5%;
+}
+.heroTwitter{
+	border-radius:5%;
+}
+.heroSocialImg:hover{
+	background:#ff5400;
+}
+
+/* //////////////////// */
+/* Footer */
+/* //////////////////// */
+
+footer{
+	display:flex;
+	position: absolute;
+	width:100vw;
+	bottom:2vh;
+	justify-content: center;
+	align-content:center;
+}
+.footCont{
+	display: flex;
+	height:1rem;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+.hoverOrange:hover{
+	color:#ff5400;
+}
+.footP{
+	display:flex;
+	font-size:calc(0.5vw + 0.5rem);
+	
+}
+.footAncImg{
+	height:1rem;
+	margin: 0px 0.5rem 0px 0px;
+}
+.footEmailCont{
+	display:flex;
+	position:fixed;
+	left:2vw;
+	justify-content: center;
+	align-content:center;
+}
+.footEmailAnc{
+	display: flex;
+}
+.footNameCont{
+	display:flex;
+	justify-content:center;
+	align-content:center;
+}
+.footLocationCont{
+	display:flex;
+	position:fixed;
+	right:2vw;
+	justify-content:flex-end;
+	align-content:center;
+}
+
+/* //////////////////// */
+/* SVG Logo */
+/* //////////////////// */
+
+/* #svgLogo{} is also in the header */
+#svgLogo path:nth-child(1){
+    stroke-dasharray: 552.6px;
+    stroke-dashoffset: 552.6px;
+    animation: line-anim 4000ms ease-out 1100ms forwards;
+}
+#svgLogo path:nth-child(2){
+    stroke-dasharray: 552px;
+    stroke-dashoffset: 552px;
+    animation: line-anim 4000ms ease-out 1000ms forwards;
+}
+
+/* KeyFrame Animations */
+
+@keyframes line-anim{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@media screen and (max-width:450px){
+	body{
+		overflow-y:scroll;
+	}
+	.heroLogo{
+		right: calc(2rem + 12vw);
+	}
+	.footP{
+		font-size:calc(0.4vw + 0.4rem);
+	}
+	.footLocationCont{
+		display:none;
+	}
+	.footEmailCont{
+		bottom:2vh;
+	}
+	.footNameCont{
+		position:fixed;
+		right:2vw;
+		bottom:2vh;
+	}
+}
+@media (min-width: 451px) and (max-width:650px){
+	.heroLogo{
+		right: calc(2rem + 10vw);
+	}
+	.footP{
+		font-size:calc(0.5vw + 0.4rem);
+	}
+	.footLocationCont{
+		display:none;
+	}
+	.footEmailCont{
+		bottom:2vh;
+	}
+	.footNameCont{
+		position:fixed;
+		right:2vw;
+		bottom:2vh;
+	}
+}
+@media (min-width: 651px) and (max-width: 1050px){
+	.heroLogo{
+		right: calc(2rem + 9vw);
+	}
+	.footP{
+		font-size:calc(0.5vw + 0.4rem);
+	}
+}
+@media (min-width: 1050px) and (max-width: 1200px){
+	.heroLogo{
+		right: calc(2rem + 8vw);
+	}
+}
+
+
+
+
