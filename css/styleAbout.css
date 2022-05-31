@@ -1,0 +1,262 @@
+/* Welcome */
+/* Colors Used: (Dark Blue) #2f4f70, (Orange) #ff5400, (Main-off/white) #f5f3f2, (Inset off/white) #eaf1ef */
+
+/* Syntax
+
+selector{
+	display:
+	height:
+	width:
+	position:
+	margin:
+	padding:
+	flexProperties:
+	textProperties:
+	colorProperties:
+}
+
+*/
+
+/* Global Declarations */
+
+*{
+	font-size:10px;
+	text-align:center;
+}
+body{
+	display:flex;
+	height:100vh;
+	flex-flow:column nowrap;
+	justify-content: space-around;
+	align-content: space-around;
+}
+p, a, h1, h2, h3, h4, h5, h6 {
+	color:#2f4f70;
+}
+a{
+	text-decoration:none;
+}
+a:hover{
+	color:#ff5400;
+}
+.orange{
+	color:#ff5400;
+}
+/* //////////////////// */
+/* Header */
+/* //////////////////// */
+
+header{
+	display: flex;
+	position:absolute;
+	top:2vh;
+	min-height:6.5rem;
+	height: 15vh;
+	width: 100vw;
+	flex-flow:row nowrap;
+	justify-content: space-around;
+	align-self:flex-start;
+	align-items:flex-end;
+}
+.headerAnc{
+	display:flex;
+	font-size:calc(12px + 1vw);
+	margin:0px;
+	padding:0px;
+}
+.aboutHomeDiv{
+	display:flex;
+	width:33.333%;
+	margin-left:10vw;
+	justify-content: flex-start;
+}
+.aboutAnc{
+	margin-right:2.5vw;
+	color:#ff5400;
+}
+.header>svg{
+	display: flex;
+	width: 33.333%;
+}
+.headerRight{
+	display:flex;
+	width: 33.333%;
+	margin-right: 10vw;
+	justify-content: flex-end;
+}
+.portfolioAnc{
+	margin-left: 2.5vw;
+}
+
+/* //////////////////// */
+/* Body */
+/* //////////////////// */
+.aboutMeHero{
+	display:flex;
+	width: 100vw;
+	flex-flow:column nowrap;
+	align-items: center;
+}
+.hiHero{
+	display:flex;
+	justify-content: center;
+	margin-top: 15vh;
+	font-size:calc(1rem + 2vw);
+}
+.aboutText{
+	margin-top:5vh;
+	width: 45%;
+	padding:calc(0.5rem + 0.7vw);
+	font-size:calc(0.5rem + 0.7vw);
+	text-align: center;
+	text-indent: 2rem;
+	line-height:calc(1rem + 0.5vw);
+	background: rgb(231,231,231);
+	background: radial-gradient(circle, rgba(231,231,231,1) 0%, rgba(249,249,249,1) 58%, rgba(235,235,235,1) 100%, rgba(83,83,83,1) 100%);
+	border-radius: 1%;
+	box-shadow:3px 3px 3px silver;
+}
+.transitioningText{
+	width: 45%;
+	padding-left:calc(0.5rem + 0.7vw);
+	padding-right:calc(0.5rem + 0.7vw);
+	font-size:calc(0.3rem + 0.6vw);
+	text-align: center;
+	text-indent: 2rem;
+	line-height:calc(1rem + 0.5vw);
+}
+/* //////////////////// */
+/* Footer */
+/* //////////////////// */
+
+footer{
+	display:flex;
+	position: absolute;
+	width:100vw;
+	bottom:2vh;
+	justify-content: center;
+	align-content:center;
+}
+.footCont{
+	display: flex;
+	height:1rem;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+.hoverOrange:hover{
+	color:#ff5400;
+}
+.footP{
+	display:flex;
+	font-size:calc(0.5vw + 0.5rem);
+	
+}
+.footAncImg{
+	height:1rem;
+	margin: 0px 0.5rem 0px 0px;
+}
+.footEmailCont{
+	display:flex;
+	position:fixed;
+	left:2vw;
+	justify-content: center;
+	align-content:center;
+}
+.footEmailAnc{
+	display: flex;
+}
+.footNameCont{
+	display:flex;
+	justify-content:center;
+	align-content:center;
+}
+.footLocationCont{
+	display:flex;
+	position:fixed;
+	right:2vw;
+	justify-content:flex-end;
+	align-content:center;
+}
+
+/* //////////////////// */
+/* SVG Logo */
+/* //////////////////// */
+
+/* #svgLogo{} is also in the header */
+#svgLogo path:nth-child(1){
+    stroke-dasharray: 552.6px;
+    stroke-dashoffset: 552.6px;
+    animation: line-anim 4000ms ease-out 1100ms forwards;
+}
+#svgLogo path:nth-child(2){
+    stroke-dasharray: 552px;
+    stroke-dashoffset: 552px;
+    animation: line-anim 4000ms ease-out 1000ms forwards;
+}
+
+/* KeyFrame Animations */
+
+@keyframes line-anim{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@media screen and (max-width:450px){
+	.aboutText{
+		width:90%;
+		font-size:calc(0.4rem + 0.5vw);
+		line-height:calc(0.8rem + 0.4vw)
+	}
+	.footP{
+		font-size:calc(0.4vw + 0.4rem);
+	}
+	.footLocationCont{
+		display:none;
+	}
+	.footEmailCont{
+		bottom:2vh;
+	}
+	.footNameCont{
+		position:fixed;
+		right:2vw;
+		bottom:2vh;
+	}
+}
+@media (min-width: 451px) and (max-width:650px){
+	.aboutText{
+		width:80%;
+		font-size:calc(0.4rem + 0.5vw);
+		line-height:calc(0.8rem + 0.4vw)
+	}
+	.footP{
+		font-size:calc(0.5vw + 0.4rem);
+	}
+	.footLocationCont{
+		display:none;
+	}
+	.footEmailCont{
+		bottom:2vh;
+	}
+	.footNameCont{
+		position:fixed;
+		right:2vw;
+		bottom:2vh;
+	}
+}
+@media (min-width: 651px) and (max-width: 1050px){
+	.aboutText{
+		width:70%;
+		font-size:calc(0.4rem + 0.5vw);
+		line-height:calc(0.8rem + 0.4vw)
+	}
+}
+@media (min-width: 1050px) and (max-width: 1200px){
+	.aboutText{
+		width:60%;
+		font-size:calc(0.4rem + 0.5vw);
+		line-height:calc(0.8rem + 0.4vw)
+	}
+}
+
+
