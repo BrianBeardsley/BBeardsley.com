@@ -1,5 +1,10 @@
 /* Welcome */
-/* Colors Used: (Dark Blue) #2f4f70, (Orange) #ff5400, (Main-off/white) #f5f3f2, (Inset off/white) #eaf1ef */
+/* Colors Used: (Dark Blue) #2f4f70 RGB(47, 79, 112), (Orange) #ff5400 RGB(255, 84, 0), (Main-off/white) #f5f3f2, (Inset off/white) #eaf1ef */
+/* Fonts Used:
+			font-family: 'Red Hat Display', sans-serif;
+			font-family: 'Tiro Gurmukhi', serif;
+			
+*/
 
 /* Syntax
 
@@ -27,11 +32,11 @@ body{
 	display:flex;
 	height:100vh;
 	flex-flow:column nowrap;
-	justify-content: space-around;
-	align-content: space-around;
-	align-items:center;
+	justify-content: space-between;
+	align-items: center;
 }
 p, a, h1, h2, h3, h4, h5, h6 {
+	font-family: 'Red Hat Display', sans-serif;
 	color:#2f4f70;
 }
 a{
@@ -46,11 +51,9 @@ a:hover{
 
 header{
 	display: flex;
-	position:absolute;
-	top:2vh;
-	min-height:6.5rem;
-	height: 15vh;
+	height:7rem;
 	width: 100vw;
+	margin-top:1.5rem;
 	flex-flow:row nowrap;
 	justify-content: space-around;
 	align-self:flex-start;
@@ -58,34 +61,23 @@ header{
 }
 .headerAnc{
 	display:flex;
-	font-size:calc(12px + 1vw);
+	font-size:calc(1.5rem + 1vw);
 	margin:0px;
 	padding:0px;
+	justify-content: center;
 }
 .aboutHomeDiv{
 	display:flex;
 	width:33.333%;
-	margin-left:10vw;
-	justify-content: flex-start;
-}
-.aboutAnc{
-	margin-right:2.5vw;
+	justify-content: space-around;
 }
 .header>svg{
 	display: flex;
 	width: 33.333%;
 }
-.headerRight{
-	display:flex;
-	width: 33.333%;
-	margin-right: 10vw;
-	justify-content: flex-end;
-}
 .contactAnc{
+	width:33.333%;
 	color:#ff5400;
-}
-.portfolioAnc{
-	margin-left: 2.5vw;
 }
 
 /* //////////////////// */
@@ -94,18 +86,25 @@ header{
 
 .contactCont{
 	display:flex;
-	height: 60vh;
 	flex-flow:column nowrap;
+	background-color: whitesmoke;
+	border:1px solid rgba(47, 79, 112, 0.45);
+	box-shadow: 4px 13px 30px 1px #2f4f70;
+	padding: 3rem 1.5rem;
+	margin:5rem 0px;
 }
 .contactMeH1{
-	width:100%;
-	margin-top:calc(5rem + 4vh);
-	margin-bottom:calc(0.5rem + 1vw);
-	font-size:calc(1.5rem + 1vw);
+	padding:0.7rem;
+	font-size:2.5rem;
+	color:whitesmoke;
+	border-radius: 50px;
+	border:1px solid black;
+	align-self: center;
+	background: rgb(47,79,112);
+	background: radial-gradient(circle, rgba(47,79,112,1) 0%, rgba(16,67,126,1) 100%);
 }
 .singleContactCont{
 	display:flex;
-	height:3rem;
 	margin:calc(0.5rem + 1vw);
 	justify-content:flex-start;
 }
@@ -118,8 +117,8 @@ header{
 .preferred{
 	display:flex;
 	margin-left:6px;
-	align-items:flex-end;
-	font-size:calc(1rem + 0.6vw);
+	align-items:center;
+	font-size:1.3rem;
 	color:black;
 }
 .contImg{
@@ -131,10 +130,10 @@ header{
 .addressAnc{
 	display:flex;
 	margin-left:2vw;
-	align-items:flex-end;
+	align-items:center;
 }
 .connectP{
-	font-size:calc(1rem + 1vw)
+	font-size:1.5rem;
 }
 /* //////////////////// */
 /* Footer */
@@ -142,9 +141,8 @@ header{
 
 footer{
 	display:flex;
-	position: absolute;
 	width:100vw;
-	bottom:2vh;
+	margin:2rem 0px;
 	justify-content: center;
 	align-content:center;
 }
@@ -159,8 +157,7 @@ footer{
 }
 .footP{
 	display:flex;
-	font-size:calc(0.5vw + 0.5rem);
-	
+	font-size:calc(1rem + 0.5vw);
 }
 .footAncImg{
 	height:1rem;
@@ -204,6 +201,22 @@ footer{
     stroke-dashoffset: 552px;
     animation: line-anim 4000ms ease-out 1000ms forwards;
 }
+#svgLogo{
+	animation-name:svgLogo;
+	animation-duration: 4000ms;
+	animation-fill-mode: forwards;
+}
+@keyframes svgLogo {
+	0%{
+		fill:rgba(47, 79, 112, 0);
+	}
+	50%{
+		fill:rgba(47, 79, 112, 0);
+	}
+	100%{
+		fill:rgba(47, 79, 112, 1);
+	}
+}
 
 /* KeyFrame Animations */
 
@@ -214,59 +227,166 @@ footer{
 }
 
 @media screen and (max-width:450px){
+	header{
+		flex-flow:row wrap;
+		align-items: center;
+	}
+	.headerAnc{
+		margin:0.5rem 0px;
+	}
+	.aboutHomeDiv{
+		width:66.666%;
+	}
+	#svgLogo{
+		width:100%;
+		order:-1;
+	}
+	.contactCont{
+		width:60%;
+	}
+	.contactMeH1{
+		font-size:1.5rem;
+	}
 	.connectP{
-		font-size:calc(0.6rem + 1vw)
+		font-size:0.9rem;
+		padding:0px;
 	}
 	.preferred{
-		font-size:calc(0.8rem + 0.2vw);
+		display:none;
 	}
 	.singleContactCont{
-		height:1.5rem;
+		margin:1rem 0px;
 	}
 	.contImg{
 		width:1.5rem;
 	}
+	footer{
+		position:initial;
+		margin-top:2rem;
+		flex-flow:column nowrap;
+	}
 	.footP{
-		font-size:calc(0.4vw + 0.4rem);
+		font-size:1rem;
 	}
 	.footLocationCont{
 		display:none;
 	}
 	.footEmailCont{
-		bottom:2vh;
+		position:static;
+		width:100%;
+		margin-bottom:1rem;
 	}
 	.footNameCont{
-		position:fixed;
-		right:2vw;
-		bottom:2vh;
+		width:100%;
+		margin: 1rem 0px;
 	}
 }
 @media (min-width: 451px) and (max-width:650px){
-	.connectP{
-		font-size:calc(0.6rem + 1vw)
+	header{
+		flex-flow:row wrap;
+		align-items: center;
 	}
-	.preferred{
-		font-size:calc(0.8rem + 0.2vw);
+	.headerAnc{
+		margin:0.5rem 0px;
+	}
+	.aboutHomeDiv{
+		width:66.666%;
+	}
+	#svgLogo{
+		width:100%;
+		order:-1;
 	}
 	.singleContactCont{
-		height:2rem;
+		margin:1rem 0px;
+	}
+	.contactMeH1{
+		font-size:2rem;
+	}
+	.connectP{
+		font-size:1.4rem;
+	}
+	.preferred{
+		font-size:1.2rem;
 	}
 	.contImg{
 		width:2rem;
 	}
+	footer{
+		position:initial;
+		flex-flow:column nowrap;
+		margin-top:2rem;
+	}
 	.footP{
-		font-size:calc(0.5vw + 0.4rem);
+		font-size:1rem;
 	}
 	.footLocationCont{
 		display:none;
 	}
 	.footEmailCont{
-		bottom:2vh;
+		position:static;
+		width:100%;
+		margin-bottom:1rem;
 	}
 	.footNameCont{
-		position:fixed;
-		right:2vw;
-		bottom:2vh;
+		width:100%;
+		margin: 1rem 0px;
 	}
 }
 
+@media (min-width: 651px) and (max-width: 1050px){
+	header{
+		flex-flow:row wrap;
+		align-items: center;
+	}
+	.headerAnc{
+		margin:0.5rem 0px;
+	}
+	.aboutHomeDiv{
+		width:66.666%;
+	}
+	#svgLogo{
+		width:100%;
+		order:-1;
+	}
+	.singleContactCont{
+		margin:1rem 0px;
+	}
+	.contactMeH1{
+		font-size:2rem;
+	}
+	.connectP{
+		font-size:1.4rem;
+	}
+	.preferred{
+		font-size:1.2rem;
+	}
+	footer{
+		position:initial;
+		flex-flow:column nowrap;
+	}
+	.footP{
+		font-size:1.2rem;
+	}
+	.footEmailCont{
+		position:static;
+		width:100%;
+		margin:1rem;
+	}
+	.footLocationCont{
+		position:static;
+		width:100%;
+		margin:1rem;
+		right:initial;
+		justify-content:center;
+	}
+	.footNameCont{
+		width:100%;
+		margin:1rem;
+	}
+}
+
+@media (min-width: 1050px) and (max-width: 1200px){
+	.footP{
+		font-size:calc(1rem + 0.5vw);
+	}
+}

@@ -1,5 +1,10 @@
 /* Welcome */
-/* Colors Used: (Dark Blue) #2f4f70, (Orange) #ff5400, (Main-off/white) #f5f3f2, (Inset off/white) #eaf1ef */
+/* Colors Used: (Dark Blue) #2f4f70 RGB(47, 79, 112), (Orange) #ff5400 RGB(255, 84, 0), (Main-off/white) #f5f3f2, (Inset off/white) #eaf1ef */
+/* Fonts Used:
+			font-family: 'Red Hat Display', sans-serif;
+			font-family: 'Tiro Gurmukhi', serif;
+			
+*/
 
 /* Syntax
 
@@ -28,9 +33,11 @@ body{
 	height:100vh;
 	flex-direction: column;
 	flex-wrap:nowrap;
-	justify-content: center;
+	justify-content: space-between;
+	overflow-x:clip;
 }
 p, a, h1, h2, h3, h4, h5, h6 {
+	font-family: 'Red Hat Display', sans-serif;
 	color:#2f4f70;
 }
 a{
@@ -46,11 +53,9 @@ a:hover{
 
 header{
 	display: flex;
-	position:absolute;
-	top:2vh;
-	min-height:6.5rem;
-	height: 15vh;
+	height:7rem;
 	width: 100vw;
+	margin-top:1.5rem;
 	flex-flow:row nowrap;
 	justify-content: space-around;
 	align-self:flex-start;
@@ -58,27 +63,22 @@ header{
 }
 .headerAnc{
 	display:flex;
-	font-size:calc(12px + 1vw);
+	font-size:calc(1.5rem + 1vw);
 	margin:0px;
 	padding:0px;
+	justify-content: center;
 }
 .aboutAnc{
 	width: 33.333%;
-	margin-left: 10vw;
 }
 .header>svg{
 	display: flex;
 	width: 33.333%;
 }
-.headerRight{
-	display:flex;
+.contactAnc{
 	width: 33.333%;
-	margin-right: 10vw;
-	justify-content: flex-end;
 }
-.portfolioAnc{
-	margin-left: 2.5vw;
-}
+
 
 /* //////////////////// */
 /* Body */
@@ -88,6 +88,7 @@ header{
 	display:flex;
 	flex-flow:row wrap;
 	max-width:inherit;
+	justify-content: center;
 }
 .heroFirstGroup{
 	display: flex;
@@ -129,7 +130,7 @@ header{
 }
 .heroSocialImg{
 	margin: 0px calc(0.5rem + 1vw);
-	width:calc(1rem + 2vw);
+	width:calc(3rem + 2vw);
 }
 .heroGithub{
 	border-radius:5%;
@@ -147,9 +148,8 @@ header{
 
 footer{
 	display:flex;
-	position: absolute;
 	width:100vw;
-	bottom:2vh;
+	margin-bottom:2rem;
 	justify-content: center;
 	align-content:center;
 }
@@ -164,7 +164,7 @@ footer{
 }
 .footP{
 	display:flex;
-	font-size:calc(0.5vw + 0.5rem);
+	font-size:calc(1rem + 0.5vw);
 	
 }
 .footAncImg{
@@ -209,6 +209,23 @@ footer{
     stroke-dashoffset: 552px;
     animation: line-anim 4000ms ease-out 1000ms forwards;
 }
+#svgLogo{
+	width:33.333%;
+	animation-name:svgLogo;
+	animation-duration: 4000ms;
+	animation-fill-mode: forwards;
+}
+@keyframes svgLogo {
+	0%{
+		fill:rgba(47, 79, 112, 0);
+	}
+	50%{
+		fill:rgba(47, 79, 112, 0);
+	}
+	100%{
+		fill:rgba(47, 79, 112, 1);
+	}
+}
 
 /* KeyFrame Animations */
 
@@ -219,57 +236,168 @@ footer{
 }
 
 @media screen and (max-width:450px){
-	body{
-		overflow-y:scroll;
+	header{
+		flex-flow:row wrap;
+		align-items: center;
+	}
+	.headerAnc{
+		margin:0.5rem 0px;
+		width:auto;
+	}
+	#svgLogo{
+		width:100%;
+		order:-1;
+	}
+	.heroContainer{
+		margin-top:2rem;
 	}
 	.heroLogo{
-		right: calc(2rem + 12vw);
+		width:4rem;
+		right: 6.5rem;
+	}
+	.brianH{
+		font-size:4rem;
+	}
+	.beardsleyH{
+		font-size:4rem;
+	}
+	.iCreateH{
+		width:65vw;
+		font-size:1.2rem;
+	}
+	footer{
+		position:initial;
+		margin-top:2rem;
+		flex-flow:column nowrap;
 	}
 	.footP{
-		font-size:calc(0.4vw + 0.4rem);
+		font-size:1rem;
 	}
 	.footLocationCont{
 		display:none;
 	}
 	.footEmailCont{
-		bottom:2vh;
+		position:static;
+		width:100%;
+		margin-bottom:1rem;
 	}
 	.footNameCont{
-		position:fixed;
-		right:2vw;
-		bottom:2vh;
+		width:100%;
+		margin: 1rem 0px;
 	}
 }
 @media (min-width: 451px) and (max-width:650px){
+	header{
+		flex-flow:row wrap;
+		align-items: center;
+	}
+	.headerAnc{
+		margin:0.5rem 0px;
+		width:auto;
+	}
+	#svgLogo{
+		width:100%;
+		order:-1;
+	}
+	.heroContainer{
+		margin-top:2rem;
+	}
 	.heroLogo{
-		right: calc(2rem + 10vw);
+		width:4rem;
+		right: 6.5rem;
+	}
+	.brianH{
+		font-size:4rem;
+	}
+	.beardsleyH{
+		font-size:4rem;
+	}
+	.iCreateH{
+		width:65vw;
+		font-size:1.5rem;
+	}
+	footer{
+		position:initial;
+		flex-flow:column nowrap;
+		margin-top:2rem;
 	}
 	.footP{
-		font-size:calc(0.5vw + 0.4rem);
+		font-size:1rem;
 	}
 	.footLocationCont{
 		display:none;
 	}
 	.footEmailCont{
-		bottom:2vh;
+		position:static;
+		width:100%;
+		margin-bottom:1rem;
 	}
 	.footNameCont{
-		position:fixed;
-		right:2vw;
-		bottom:2vh;
+		width:100%;
+		margin: 1rem 0px;
 	}
 }
 @media (min-width: 651px) and (max-width: 1050px){
+	header{
+		flex-flow:row wrap;
+		align-items: center;
+	}
+	.headerAnc{
+		margin:0.5rem 0px;
+		width:auto;
+	}
+	#svgLogo{
+		width:100%;
+		order:-1;
+	}
+	.heroContainer{
+		margin-top:2rem;
+	}
 	.heroLogo{
-		right: calc(2rem + 9vw);
+		width:4rem;
+		right: 6.5rem;
+	}
+	.brianH{
+		font-size:4rem;
+	}
+	.beardsleyH{
+		font-size:4rem;
+	}
+	.iCreateH{
+		width:65vw;
+		font-size:1.5rem;
+	}
+	footer{
+		position:initial;
+		flex-flow:column nowrap;
 	}
 	.footP{
-		font-size:calc(0.5vw + 0.4rem);
+		font-size:1.2rem;
+	}
+	.footEmailCont{
+		position:static;
+		width:100%;
+		margin:1rem;
+	}
+	.footLocationCont{
+		position:static;
+		width:100%;
+		margin:1rem;
+		right:initial;
+		justify-content:center;
+	}
+	.footNameCont{
+		width:100%;
+		margin:1rem;
 	}
 }
+
 @media (min-width: 1050px) and (max-width: 1200px){
 	.heroLogo{
 		right: calc(2rem + 8vw);
+	}
+	.footP{
+		font-size:calc(1rem + 0.5vw);
 	}
 }
 

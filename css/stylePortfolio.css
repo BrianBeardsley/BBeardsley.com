@@ -1,5 +1,10 @@
 /* Welcome */
 /* Colors Used: (Dark Blue) #2f4f70, (Orange) #ff5400, (Main-off/white) #f5f3f2, (Inset off/white) #eaf1ef */
+/* Fonts Used:
+			font-family: 'Red Hat Display', sans-serif;
+			font-family: 'Tiro Gurmukhi', serif;
+			
+*/
 
 /* Syntax
 
@@ -210,6 +215,22 @@ footer{
     stroke-dasharray: 552px;
     stroke-dashoffset: 552px;
     animation: line-anim 4000ms ease-out 1000ms forwards;
+}
+#svgLogo{
+	animation-name:svgLogo;
+	animation-duration: 4000ms;
+	animation-fill-mode: forwards;
+}
+@keyframes svgLogo {
+	0%{
+		fill:rgba(47, 79, 112, 0);
+	}
+	50%{
+		fill:rgba(47, 79, 112, 0);
+	}
+	100%{
+		fill:rgba(47, 79, 112, 1);
+	}
 }
 
 /* KeyFrame Animations */
