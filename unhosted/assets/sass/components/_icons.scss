@@ -1,0 +1,23 @@
+
+/* Icons */
+
+	ul.icons {
+		cursor: default;
+		@include breakpoint('<=xxlarge') {
+			margin:0;
+		}
+
+		li {
+			display: inline-block;
+		}
+
+		a {
+			display: inline-block;
+			width: 2em;
+			height: 2em;
+			line-height: 2em;
+			text-align: center;
+			border: 0;
+			font-size:2em;
+		}
+	}

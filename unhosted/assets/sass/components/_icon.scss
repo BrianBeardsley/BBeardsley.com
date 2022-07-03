@@ -1,0 +1,33 @@
+
+/* Icon */
+
+	.icon {
+		@include icon;
+		position: relative;
+		text-decoration: none;
+		color:#00D9FF;
+
+		&:hover {
+			color:#ff7b00;
+		}
+
+		&:before {
+			line-height: inherit;
+		}
+
+		> .label {
+			display: none;
+		}
+
+		&.solid {
+			&:before {
+				font-weight: 900;
+			}
+		}
+
+		&.brands {
+			&:before {
+				font-family: 'Font Awesome 5 Brands';
+			}
+		}
+	}

@@ -1,0 +1,21 @@
+
+/* Header */
+
+	#header {
+		position: fixed;
+		z-index: 10000;
+		left: 0;
+		top: 0;
+		width: 100%;
+		background: white;
+		height: 3em;
+		line-height: 3em;
+		font-size: 17pt;
+		@include breakpoint('<=small') {
+			background: transparent;
+		}
+	}
+
+	body {
+		padding-top: 3em;
+	}

@@ -1,0 +1,79 @@
+
+/* Services */
+
+    #one {
+        min-height:40em;
+        @include breakpoint('<=small') {
+            flex-direction:column;
+            align-items: center;
+            justify-content: center;
+            .content{
+                order:-1;
+            }
+        }
+        .servicesDiv{
+            left:5em;
+            display: flex;
+            justify-content: center;;
+            width:40em;
+            @include breakpoint('<=small') {
+                margin-top:2em;
+        }
+            @include breakpoint('<=xsmall') {
+                max-width: calc(100% - 1.5em);
+            }
+            .servicesList{
+                display:flex;
+                flex-flow:row wrap;
+                justify-content: center;
+                line-height: 0.9em;
+                .service{
+                    width:30%;
+                    display:flex;
+                    flex-wrap:wrap;
+                    justify-content: flex-start;
+                    text-transform:capitalize;
+                    margin:0.5em;
+                    padding:12px;
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+                    @include breakpoint('<=large') {
+                        width:40%;
+                    }
+                    @include breakpoint('<=medium') {
+                        width:80%;
+                    }
+                    @include breakpoint('<=small') {
+                        width:60%;
+                    }
+                    @include breakpoint('<=xsmall') {
+                        width:100%;
+                        max-width: calc(100% - 1.5em);
+                    }
+                    h4{
+                        display: flex;
+                        justify-content: center;
+                        font-size:1.8em;
+                        text-align:center;
+                        line-height: 0.8em;
+                        margin:6px 0px;
+                        width:100%;
+                    }
+                    p{
+                        display: list-item;
+                        list-style-image: url('../../images/liststylebrackets.svg');
+                        list-style-position: inside;
+                    }
+                    ul{
+                        margin:6px 0px 6px 1.5em;
+                        text-align: left;
+                        text-indent: -1.5em;
+                        list-style-image: url('../../images/liststylebrackets.svg');
+                        list-style-position: inside;
+                    }
+                }
+            }
+        }
+        .button{
+            bottom:0vh;
+        }
+    }
