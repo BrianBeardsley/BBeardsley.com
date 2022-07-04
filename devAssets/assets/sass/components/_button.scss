@@ -123,10 +123,7 @@
 			box-shadow:inset 0 1px 0 #c4cfff, inset 0 -3px 0 #ff7b00;
 		}
 		&.landingPageButton{
-			position:static;
-			&:after{
-				background-color:unset;
-			}
+			position:relative;
 		}
 }  
 

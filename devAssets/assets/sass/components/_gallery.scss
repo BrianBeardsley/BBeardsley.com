@@ -53,7 +53,7 @@
 					width:80%;
 				}
 
-				>div {
+				>div { /* .linksDiv */
 					display: flex;
 					flex-flow:row nowrap;
 					width:100%;
@@ -69,23 +69,29 @@
 						img {
 							height:2em;
 						}
+						span{
+							color:black;
+							&:hover {
+								color:#ff7b00;
+							}
+						}
 					}
 
 					span {
 						margin-left:0.3em;
 					}
 
-					>div {
+					>div { /* .githubDiv */
 						display: flex;
 						align-items: center;
 
-						.linksDiv{
-							img {
-								height:inherit;
+						.githubSpan{
+							color:black;
+							&:hover {
+								color:#ff7b00;
 							}
 						}
 					}
-
 				}
 
 			}

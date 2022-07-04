@@ -83,7 +83,8 @@
 				}
 			}
 			@include breakpoint('<=small') {
-				overflow: visible;
+				// overflow: visible;
+				overflow:unset;
 			}
 			.whoIAm{
 				position:absolute;
@@ -98,27 +99,29 @@
 				}
 				img{
 					height:600px;
+					width:450.5px;
 					border-radius: 10%;
 					border:1px solid black;
 					box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-					@include breakpoint('<=xxlarge') {
-						height:600px;
-					}
 			
 					@include breakpoint('<=xlarge') {
 						height:550px;
+						width:413px;
 					}
 			
 					@include breakpoint('<=large') {
 						height:500px;
+						width:375.5px;
 					}
 			
 					@include breakpoint('<=medium') {
 						height:450px;
+						width:338px;
 					}
 			
 					@include breakpoint('<=small') {
 						height:350px;
+						width:263px;
 					}
 				}
 			}

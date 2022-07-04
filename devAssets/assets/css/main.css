@@ -1327,6 +1327,7 @@ table.default tfoot {
 }
 .gallery .galleryItem video {
   width: 80%;
+  background-image: url("/images/portrait.webp");
 }
 .gallery .galleryItem .tfp {
   display: none;
